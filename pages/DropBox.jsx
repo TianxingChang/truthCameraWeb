@@ -121,7 +121,7 @@ function DropBox() {
 
 
     axios({
-      url: "http://localhost:8080/api/upload",
+      url: "http://20.24.98.15:8080/api/upload",
       method: 'POST',
   }).then((res)=>{
     //res.json()}).then((res)=>{
