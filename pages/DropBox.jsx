@@ -122,13 +122,13 @@ function DropBox() {
 
 
     axios({
-      url: upUrl,
+      url: "http://localhost:8080/api/upload",
       method: 'POST',
   }).then((res)=>{
-    console.log(res);
-    res.json()}).then((res)=>{
+    //res.json()}).then((res)=>{
     if(res.status==200){
-      if(res.result){
+      console.log(res)
+      if(res.data.result){
         setBoxText("Image is shot with a real camera!");
         setShowFireworks(true);
         setBackground("./checkMark.png");
