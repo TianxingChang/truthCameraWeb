@@ -7,7 +7,6 @@ import styles from '../styles/Home.module.css';
 import { Button } from '@geist-ui/core'
 import styled, { createGlobalStyle } from 'styled-components';
 import Fireworks from './backupFiles/Fireworks'
-import handleUpload from './handleUpload';
 
 const DropzoneContainer = styled.div`
   width: 400px;
@@ -97,8 +96,8 @@ function DropBox() {
 
 
   async function handleUploadInner(){
-    const upUrl ='http://127.0.0.1:5000/verify_img?pic_hash=' + '"' + uploadHash + '"';
-    console.log(upUrl);
+//    const upUrl ='http://127.0.0.1:5000/verify_img?pic_hash=' + '"' + uploadHash + '"';
+  //  console.log(upUrl);
 //     const response = await fetch(upUrl,{method: "POST"})
 //       .then((response) => response.json())
 //       .then((res)=>{
