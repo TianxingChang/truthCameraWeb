@@ -2,7 +2,7 @@
 import React, { useCallback, useState ,useEffect} from 'react';
 import { useDropzone } from 'react-dropzone';
 import { SHA1 } from 'crypto-js';
-import axios from 'axios';
+// import axios from 'axios';
 import styles from '../styles/Home.module.css';
 import { Button } from '@geist-ui/core'
 import styled, { createGlobalStyle } from 'styled-components';
@@ -11,7 +11,6 @@ import dropzoneStyle from '../styles/DropZone.module.css'
 
 const DropzoneContainer = styled.div`
 `;
-
 
 const UploadMessage = styled.p`
   color: #333;

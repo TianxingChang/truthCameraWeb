@@ -5,10 +5,6 @@ import styles from '../styles/Home.module.css';
 import DropBox from './DropBox';
 
 export default function Home() {
-  // const [uploadedFiles, setUploadedFiles] = useState([]);
-  // const [imageSrc, setImageSrc] = useState(null);
-  // const [showFireworks, setShowFireworks] = useState(false);
-
 
   /******************** handleDrop ***************************/
   
@@ -48,8 +44,6 @@ export default function Home() {
   //   }
   // };
 
-
-
   return (
     <div className={styles.container}>
       <Head>
@@ -67,11 +61,6 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          {/* <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Upload &uarr;</h3>
-            <p>Select from your folder</p>
-          </a> */}
-
           <DropBox />
         </div>
       </main>

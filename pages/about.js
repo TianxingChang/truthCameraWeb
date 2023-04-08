@@ -1,6 +1,5 @@
 import React from "react";
 import styles from '../styles/Home.module.css';
-import ReactMarkdown from 'react-markdown'
 
 const Contact = () => {
   return (
