@@ -86,6 +86,7 @@ const Contact = () => {
             <h2 className={styles.mdh2}>🧾 License</h2>
 
             The Trustful Camera is released under the MIT license. See `LICENSE` for more information.
+            The Trustful Camera is released under the MIT license. See `LICENSE` for more information.
 
             </div>
 

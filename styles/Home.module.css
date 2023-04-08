@@ -12,6 +12,7 @@
 .container2{
   height:200px;
   min-width: 60px;
+  justify-content: center;
 }
 
 .container3 {
@@ -23,6 +24,7 @@
   justify-content: center;
   align-items: center;
   width: 50%;
+  justify-content: center;
 }
 
 .title {
