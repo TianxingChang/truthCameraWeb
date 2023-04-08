@@ -7,12 +7,14 @@ import styles from '../styles/Home.module.css';
 import { Button } from '@geist-ui/core'
 import styled, { createGlobalStyle } from 'styled-components';
 import Fireworks from './backupFiles/Fireworks'
+import dropzoneStyle from '../styles/DropZone.module.css'
 
 const DropzoneContainer = styled.div`
   width: 400px;
   height: 200px;
   border: 2px dashed #0070f3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -164,8 +166,9 @@ function DropBox() {
 
   function renderBackground(background){
     return(
-      <DropzoneContainer {...getRootProps()} style={{backgroundImage: `url('${background}')` }}>
+      <DropzoneContainer className={dropzoneStyle.DropzoneContainer} {...getRootProps()} style={{backgroundImage: `url('${background}')` } }>
         <input {...getInputProps()} />
+        <img src='./upload.svg' style={{height:70}}/>
         {renderText(textColor)}
       </DropzoneContainer>
     )

@@ -1,32 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-// import Navbar from "./Navbar";
-//import { Button } from '@geist-ui/core'
-// import {useDropzone} from 'react-dropzone'
-// import styled, { createGlobalStyle } from 'styled-components';
-// import handleUpload from './handleUpload';
-// import handleDrop from './handleDrop'
-// import Fireworks from './backupFiles/Fireworks'
+// import DropZone from './DropZone.jsx'
 import DropBox from './DropBox';
-
-
-// const DropzoneContainer = styled.div`
-//   width: 400px;
-//   height: 200px;
-//   border: 2px dashed #0070f3;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   cursor: pointer;
-//   margin-bottom: 20px;
-// `;
-
-
-// const UploadMessage = styled.p`
-//   color: #333;
-//   font-size: 18px;
-// `;
 
 export default function Home() {
   // const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -73,6 +49,7 @@ export default function Home() {
   // };
 
 
+
   return (
     <div className={styles.container}>
       <Head>
@@ -97,26 +74,6 @@ export default function Home() {
 
           <DropBox />
         </div>
-          {/* <div className={styles.card}>
-            <DropzoneContainer {...getRootProps()}>
-              <input {...getInputProps()} />
-              <UploadMessage>Drop files here or click to upload</UploadMessage>
-            </DropzoneContainer>
-            
-           <Fireworks show={showFireworks} />
-
-            <ul>
-              {uploadedFiles.map((file, index) => (
-                <li key={index}>{file.name}</li>
-              ))}
-            </ul>
-          </div>
-
-        </div>
-
-        <div>
-          <Button onClick={handleUpload}>Verify</Button>
-        </div> */}
       </main>
 
       <footer>
@@ -180,6 +137,7 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
+      
     </div>
   )
 }

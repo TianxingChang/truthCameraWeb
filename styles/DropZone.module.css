@@ -1,0 +1,11 @@
+.DropzoneContainer{
+    width: 400px;
+    height: 200px;
+    border: 2px dashed #0070f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
