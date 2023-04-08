@@ -78,6 +78,7 @@ export default function Home() {
       <Head>
         <title>TruthCamera</title>
         <link rel="icon" href="/smallLogo.ico" />
+        <meta name="description" content="TruthCamera - a WEB3 solution for photo verification" />
       </Head>
       <main>
         <h1 className={styles.title}>
