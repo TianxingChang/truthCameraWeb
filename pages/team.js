@@ -15,31 +15,31 @@ const Team = () => {
         </p>
 
         <div className={styles.grid2}>
-          <a href="/" className={styles.card2}>
+          <a href="/" className={styles.card3}>
             <h3>CHANG Tianxing</h3>
           </a>
 
-          <a href="/" className={styles.card2}>
+          <a href="/" className={styles.card3}>
             <h3>SONG Shiyuan</h3>
           </a>
 
-          <a href="/" className={styles.card2}>
+          <a href="/" className={styles.card3}>
             <h3>ZHANG Liyu </h3>
           </a>
 
-          <a href="/" className={styles.card2}>
+          <a href="/" className={styles.card3}>
             <h3>ZHOU Sitian </h3>
           </a>
 
-          <a href="/" className={styles.card2}>
+          <a href="/" className={styles.card3}>
             <h3>ZONG Haosong </h3>
           </a>
 
-          <a href="/" className={styles.card2}>
+          <a href="/" className={styles.card3}>
             <h3> Yan Xizhi</h3>
           </a>
-
         </div>
+
       </main>
 
       <footer>

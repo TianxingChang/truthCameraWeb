@@ -5,10 +5,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 60vh;
+}
+.container2{
+  height:200px;
+  min-width: 60px;
 }
 
 .container3 {
   min-height: 100vh;
+  min-width: 60vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -156,18 +162,29 @@
   margin-bottom: 20px;
 }
 
-.teamHead h1{
-
+.teamHead{
+  min-width: 40vh;
 }
 
 
 .grid2{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid2 {
+    flex-wrap: wrap;
+  }
 }
 
 .card2{
   text-align: center;
+  min-width: 10vh;
+  background-color: rgba(173, 161, 148, 0.053);
+  align-items: center;
+  align-items: center;
 }
 
 .card2 h3 {
@@ -188,6 +205,27 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   text-align: left;
 }
+
+
+.card3 {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  text-align: left;
+  align-items: center;
+  max-width: 20vh;
+}
+
+.card3 :hover{
+  color: rgb(67, 109, 227);
+}
+
 
 .title2 a {
   color: #0070f3;
@@ -223,10 +261,10 @@
 }
 
 
-.container2{
-  height:200px;
-}
+
 
 .mdh2{
   text-align: left;
 }
+
+

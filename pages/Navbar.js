@@ -6,7 +6,7 @@ import NavItem from "./NavItem.js";
 import styles from '../styles/Home.module.css';
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
+  { text: "Verify", href: "/" },
   { text: "About", href: "/about" },
   { text: "Team", href: "/team" },
 ];
