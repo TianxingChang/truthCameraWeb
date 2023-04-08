@@ -36,6 +36,7 @@ const Navbar = () => {
                 setNavActive(false);
               }}
               key={menu.text}
+              style={{backgroundColor:'white', width:"80%", height:'30px'}}
             >
               <NavItem active={activeIdx === idx} {...menu} />
             </div>
