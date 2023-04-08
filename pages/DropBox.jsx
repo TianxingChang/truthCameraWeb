@@ -10,15 +10,6 @@ import Fireworks from './backupFiles/Fireworks'
 import dropzoneStyle from '../styles/DropZone.module.css'
 
 const DropzoneContainer = styled.div`
-  width: 400px;
-  height: 200px;
-  border: 2px dashed #0070f3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 20px;
 `;
 
 
@@ -39,6 +30,7 @@ function DropBox() {
   const [textColor,setTextColor] = useState('black')
   const [isHover, setIsHover] = useState(false);
   const [uploadHash, setUploadHash] = useState(null);
+  const [uploadedImage, setUploadedImage] = useState(null);
 
   const handleMouseEnter = () => {
      setIsHover(true);
@@ -68,9 +60,8 @@ function DropBox() {
   // }, []);
 
   const onDrop = useCallback((acceptedFiles) => {
-    // Upload files to the server here
-    console.log(acceptedFiles);
     const file = acceptedFiles[0];
+    setUploadedImage(file);
     const reader = new FileReader();
     reader.onload = async () => {
       const hash = SHA1(reader.result).toString();
@@ -85,12 +76,10 @@ function DropBox() {
       // } catch (error) {
       //   console.error(error);
       // }
+
     };
     reader.readAsArrayBuffer(file);
- 
-    // reader.onload=()=>{
-    //   setImageSrc(reader.result);
-    // }
+    setBoxText('');
 
     // reader.readAsDataURL(file)
     setUploadedFiles((prevFiles) => [...prevFiles, ...acceptedFiles]);
@@ -140,23 +129,10 @@ function DropBox() {
         setBackground("./checkMark.png");
         setTextColor("red");
         
-        // setBackGroundSrc("./wrongMark.png")
       }
     }
   }).catch(err=>console.log(err)) 
   }
-
-  // const createCss = () => {
-  //   if (backGroundSrc && backGroundSrc === './checkMark.png') {
-  //     return {
-  //       backgroundImage: `url(${backGroundSrc})`,
-  //       backgroundSize: "cover",
-  //       backgroundRepeat: "no-repeat"
-  //     };
-  //   } else {
-  //     return {};
-  //   }
-  // };
 
   function renderText(textColor){
     return(
@@ -164,12 +140,29 @@ function DropBox() {
     )
   }
 
+  function arrayIsEmpty(array) {
+    //If it's not an array, return FALSE.
+    if (!Array.isArray(array)) {
+        return FALSE;
+    }
+    //If it is an array, check its length property
+    if (array.length == 0) {
+        //Return TRUE if the array is empty
+        return true;
+    }
+    //Otherwise, return FALSE.
+    return false;
+}
+
   function renderBackground(background){
     return(
       <DropzoneContainer className={dropzoneStyle.DropzoneContainer} {...getRootProps()} style={{backgroundImage: `url('${background}')` } }>
         <input {...getInputProps()} />
-        <img src='./upload.svg' style={{height:70}}/>
-        {renderText(textColor)}
+        {uploadedImage &&
+          <img src={URL.createObjectURL(uploadedImage)} alt="Preview" style={{ maxWidth: '100%' ,maxHeight:'100%'}} />
+        }
+        {!uploadedImage && <img src='./upload.svg' style={{height:70}}/>}
+        {!uploadedImage && renderText(textColor)}
       </DropzoneContainer>
     )
   }
