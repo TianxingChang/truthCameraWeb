@@ -31,6 +31,7 @@ function DropBox() {
   const [isHover, setIsHover] = useState(false);
   const [uploadHash, setUploadHash] = useState(null);
   const [uploadedImage, setUploadedImage] = useState(null);
+  const [uploadButton, setUploadButton] = useState(false);
 
   const handleMouseEnter = () => {
      setIsHover(true);
@@ -108,9 +109,18 @@ function DropBox() {
 //     })
 // .catch(err=>console.log(err));
 
+    setUploadButton(true);
+    setBoxText('uploading file...');
+    setTextColor('purple');
 
 
+    setTimeout(()=>{
+      setBoxText("No record is found on the blockchain...");
+      setBackground("./wrongMark.svg");
+      setTextColor("red");
+    }, 2000)
 
+    /*
     axios({
       url: "http://20.24.98.15:8080/api/upload",
       method: 'POST',
@@ -128,55 +138,45 @@ function DropBox() {
         setBoxText("No record is found on the blockchain...");
         setBackground("./checkMark.png");
         setTextColor("red");
-        
       }
     }
-  }).catch(err=>console.log(err)) 
-  }
+  }).catch((err)=>{console.log(err)
+  }).finally(()=>{
+        setBoxText("No record is found on the blockchain...");
+        setBackground("./wrongMark.svg");
+        setTextColor("red");
+  })
+  */
+}
 
   function renderText(textColor){
     return(
         <p style={{color: textColor}}>{boxText}</p>
     )
   }
-
-  function arrayIsEmpty(array) {
-    //If it's not an array, return FALSE.
-    if (!Array.isArray(array)) {
-        return FALSE;
-    }
-    //If it is an array, check its length property
-    if (array.length == 0) {
-        //Return TRUE if the array is empty
-        return true;
-    }
-    //Otherwise, return FALSE.
-    return false;
-}
+// style={{backgroundImage: `url('${background}')` }
 
   function renderBackground(background){
     return(
-      <DropzoneContainer className={dropzoneStyle.DropzoneContainer} {...getRootProps()} style={{backgroundImage: `url('${background}')` } }>
+      <DropzoneContainer className={dropzoneStyle.DropzoneContainer} {...getRootProps()}>
         <input {...getInputProps()} />
-        {uploadedImage &&
-          <img src={URL.createObjectURL(uploadedImage)} alt="Preview" style={{ maxWidth: '100%' ,maxHeight:'100%'}} />
+        {uploadedImage && !background &&
+          <img src={URL.createObjectURL(uploadedImage)} alt="Preview" style={{ maxWidth: '70%' ,maxHeight:'70%'}} />
         }
-        {!uploadedImage && <img src='./upload.svg' style={{height:70}}/>}
+        {!uploadedImage && !background && <img src='./upload.svg' style={{height:70}}/>}
+        {background && <img src={background} style={{maxWidth: '60%',maxHeight:'60%'}} />}
         {!uploadedImage && renderText(textColor)}
+        {uploadedImage && renderText(textColor)}
       </DropzoneContainer>
     )
   }
 
-
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
+  console.log('uploadButton',uploadButton);
   return (
 <>
     <div className={styles.card}>
-      {/* <DropzoneContainer {...getRootProps()} style={{backgroundImage: `url(${background})`}}>
-        <input {...getInputProps()} />
-        {renderText(textColor)}
-      </DropzoneContainer> */}
       {renderBackground(background)}
       <Fireworks show={showFireworks} />
 
