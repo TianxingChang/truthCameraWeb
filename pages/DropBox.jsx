@@ -94,7 +94,7 @@ function DropBox() {
       .then((response) => response.json())
       .then((res) => {
         if (res.status === 200) {
-          if (!res.result) {
+          if (res.result) {
             setBoxText("Image is shot with a real camera!");
             setShowFireworks(true);
             setBackground("./checkMark.png");
