@@ -6,11 +6,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 60vh;
-  
+  min-width: 65vh;
 }
-.container2{
-  height:200px;
+.container2 {
+  height: 200px;
   min-width: 60px;
   justify-content: center;
 }
@@ -30,10 +29,15 @@
 .title {
   /* color: rgb(67, 109, 227); */
   text-decoration: none;
-  background: rgb(2,0,36);
-background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rgba(0,212,255,1) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    328deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 9, 118, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title a:hover,
@@ -51,14 +55,11 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
 .title {
   overflow: hidden;
   /* text-align: center; */
-  animation: 
-  typing 2.5s steps(40, end),
-  blink-caret .75s step-end infinite;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
   white-space: nowrap;
   margin: 0 auto;
-  border-right: .15em solid orange;
+  border-right: 0.15em solid orange;
 }
-
 
 .title {
   text-align: center;
@@ -69,7 +70,6 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   text-align: center;
 }
 
-
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
@@ -78,7 +78,8 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
 .grid {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  justify-items: center;
   flex-wrap: wrap;
   max-width: 800px;
   margin-top: 3rem;
@@ -129,36 +130,43 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
 .logo2 {
   height: 3.9em;
 }
-.nav__link link{
-  font-size: 18px; 
-  color:#0070f3;
+.nav__link link {
+  font-size: 18px;
+  color: #0070f3;
   position: relative;
   transition: all 0.2s;
 }
 
-.nav__link:hover{
- font-weight: bold;
+.nav__link:hover {
+  font-weight: bold;
 }
 
-.upload_button{
-  color:#eaeaea;
+.upload_button {
+  color: #eaeaea;
 }
-
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 70% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
-
-.card div{
+.card div {
   width: 400px;
   height: 200px;
   border: 2px dashed #0070f3;
@@ -169,12 +177,11 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   margin-bottom: 20px;
 }
 
-.teamHead{
+.teamHead {
   min-width: 40vh;
 }
 
-
-.grid2{
+.grid2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -186,7 +193,7 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   }
 }
 
-.card2{
+.card2 {
   text-align: center;
   min-width: 10vh;
   background-color: rgba(173, 161, 148, 0.053);
@@ -198,7 +205,6 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   margin: 0 0 1rem 0;
   font-size: 1rem;
 }
-
 
 .card2 {
   margin: 1rem;
@@ -212,7 +218,6 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   transition: color 0.15s ease, border-color 0.15s ease;
   text-align: left;
 }
-
 
 .card3 {
   margin: 1rem;
@@ -229,10 +234,9 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   max-width: 20vh;
 }
 
-.card3 :hover{
+.card3 :hover {
   color: rgb(67, 109, 227);
 }
-
 
 .title2 a {
   color: #0070f3;
@@ -251,7 +255,6 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   font-size: 3.6rem;
 }
 
-
 .title2 {
   text-align: center;
 }
@@ -261,27 +264,21 @@ background: linear-gradient(328deg, rgba(2,0,36,1) 0%, rgba(121,9,118,1) 35%, rg
   text-align: center;
 }
 
-
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
   align-items: center;
 }
 
-
-
-
-.mdh2{
+.mdh2 {
   text-align: left;
 }
-
 
 @media (max-width: 1000px) {
   .title {
     font-size: 2.5rem;
   }
-  .description{
+  .description {
     max-width: 90%;
   }
 }
-
