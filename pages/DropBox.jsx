@@ -26,7 +26,7 @@ function DropBox() {
 
   const [formData, setFormData] = useState([]);
   const [background, setBackground] = useState(null);
-  const [textColor, setTextColor] = useState("black");
+  const [textColor, setTextColor] = useState("grey");
   const [isHover, setIsHover] = useState(false);
   const [uploadHash, setUploadHash] = useState(null);
   const [uploadedImage, setUploadedImage] = useState(null);
@@ -163,7 +163,7 @@ function DropBox() {
           />
         )}
         {!uploadedImage && !background && (
-          <img src="./upload.svg" style={{ height: 70 }} />
+          <img src="./upload.jpg" style={{ height: 95 }} />
         )}
         {background && (
           <img src={background} style={{ maxWidth: "60%", maxHeight: "60%" }} />

@@ -26,6 +26,9 @@
   justify-content: center;
 }
 
+.holder {
+  height: 20vh;
+}
 .title {
   /* color: rgb(67, 109, 227); */
   text-decoration: none;
