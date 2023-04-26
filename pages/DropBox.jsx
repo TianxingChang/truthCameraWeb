@@ -94,25 +94,25 @@ function DropBox() {
       .then((response) => response.json())
       .then((res) => {
         if (res.status === 200) {
-          if (res.result) {
-            setBoxText("Image is shot with a real camera!");
-            setShowFireworks(true);
-            setBackground("./checkMark.png");
-            setTextColor("green");
-          } else {
-            setBoxText("No record is found on the blockchain...");
-            setBackground("./wrongMark.svg");
-            setTextColor("red");
-          }
+          // if (res.result) {
+          //   setBoxText("Image is shot with a real camera!");
+          //   setShowFireworks(true);
+          //   setBackground("./checkMark.png");
+          //   setTextColor("green");
+          // } else {
+          //   setBoxText("No record is found on the blockchain...");
+          //   setBackground("./wrongMark.svg");
+          //   setTextColor("red");
+          // }
         }
       })
       .catch((err) => console.log(err));
 
-    // setTimeout(() => {
-    //   setBoxText("No record is found on the blockchain...");
-    //   setBackground("./wrongMark.svg");
-    //   setTextColor("red");
-    // }, 2000);
+    setTimeout(() => {
+      setBoxText("No record is found on the blockchain...");
+      setBackground("./wrongMark.svg");
+      setTextColor("red");
+    }, 2000);
 
     /*
     axios({
@@ -176,7 +176,6 @@ function DropBox() {
 
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
-  console.log("uploadButton", uploadButton);
   return (
     <>
       <div className={styles.card}>
